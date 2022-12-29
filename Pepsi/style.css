@@ -1,0 +1,92 @@
+/*Resert Simples*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*Estrutura Principal*/
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Div que contém a imagem do produto*/
+#imagem{
+    position: absolute;
+    width: 140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Parte do fundo da animação do produto*/
+.background{
+    position: relative;
+    z-index: -1;
+    width: 220px;
+    height: 220px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/*Textos de informações do produto*/
+.texto{
+    visibility: hidden;
+    width: 60%;
+    color: #fff;
+    padding-top: 30px;
+    margin-left: 30px;
+}
+.texto h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.texto p{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.texto button{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 18px;
+
+    color: #fff;
+    border: 3px solid #fff;
+    background-color: red;
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+}
+.texto button:hover{
+    background: linear-gradient(75deg, #0b0bc7 10%, red 90%);
+    transition: all 0.5s;
+    color: #fff;
+    border: transparent;
+}
+
+/*Aplicando o a animção do Hover as div's internas*/
+main:hover .background {
+    cursor: pointer;
+    background: linear-gradient(to right, #0d214f , #0b0bc7);
+    width: 600px;
+    height: 300px;
+    border-radius: 30px;
+}
+
+main:hover #imagem{
+    cursor: pointer;
+    width: 140px;
+    margin-left: 30%;
+}
+
+main:hover .texto{
+    visibility: visible;
+}
+
+
